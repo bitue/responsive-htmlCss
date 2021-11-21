@@ -1,0 +1,302 @@
+/* overall css */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* overall css ends here */
+
+/* for header css starts */
+
+header {
+    background-image: linear-gradient(-90deg, rgb(45, 201, 221), rgb(147, 202, 224));
+    padding: 30px 0px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.left-part>h1 {
+    margin-bottom: 20px;
+}
+
+h1:hover {
+    animation: zigling 2s ease 1 alternate;
+}
+
+.flex-hero {
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+.right-part {
+    /* transition: transform 2s ease-in; */
+    width: 550px;
+}
+
+.right-part img {
+    width: 100%;
+}
+
+.right-part:hover {
+    animation: zigling 2s ease 1 alternate;
+}
+
+button {
+    background-color: skyblue;
+    padding: 10px 24px;
+    border: 2px solid black;
+    margin-top: 20px;
+    transition: border-radius 1s ease;
+    font-weight: 700;
+}
+
+button:hover {
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* end of header section  */
+
+/* added animation here -------------------------------- */
+
+@keyframes zigling {
+    from {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    to {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+/* -------------------------animation code end---------- */
+
+/* starts player section */
+
+.play {
+    margin: 60px 0px;
+}
+
+.wrapper {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.grid-players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.player {
+    width: 340px;
+    height: 474px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgb(231, 231, 231);
+    margin: 0 auto;
+}
+
+.player .img {
+    width: 320px;
+}
+
+.img img {
+    width: 100%;
+}
+
+.des h2, .des p {
+    margin: 20px 0px;
+}
+
+.des h2 {
+    text-align: left;
+}
+
+/* ends player section */
+
+/* extra highlights section */
+
+.grid-high {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1050px;
+    margin: 40px auto;
+    grid-gap: 20px;
+}
+
+.video {
+    width: 320px;
+    margin: 0 auto;
+}
+
+/* end highlights section */
+
+/* Buy Ticket section  */
+
+.get-ticket {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+
+.ticket-section {
+    background-image: linear-gradient(-90deg, rgb(45, 201, 221), rgb(147, 202, 224));
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.form-ticket {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-ticket p {
+    padding: 10px 20px;
+}
+
+p input {
+    padding: 10px 20px;
+}
+
+.form-ticket button {
+    margin-right: 20px;
+}
+
+.form-ticket button i {
+    font-size: 23px;
+    padding: 0px 14px;
+}
+
+/* end ticket section */
+
+/* footer section starts */
+
+.flex-foot {
+    width: 480px;
+    height: 215px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 475px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.link i {
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.foot {
+    margin-top: 15px;
+}
+
+/* end of footer section */
+
+/* ------------- using media query here --------------- */
+
+/* Destop mode media query */
+
+@media screen and (min-width:1080px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+/* Tablet mode media query */
+
+@media screen and (min-width:688px) and (max-width:1080px) {
+    .flex-hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .grid-high, .grid-players {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .flex-hero, .get-ticket, .wrapper, .grid-high {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .flex-hero {
+        padding: 40px 0px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    .left-part {
+        padding-bottom: 50px;
+    }
+}
+
+/* mobile phone media query */
+
+@media screen and (max-width:688px) {
+    .flex-hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .grid-high, .grid-players {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .flex-hero, .get-ticket, .wrapper, .grid-high {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .right-part {
+        /* transition: transform 2s ease-in; */
+        width: 100%;
+    }
+    .flex-foot {
+        width: 100%;
+    }
+    .logo {
+        width: 70%;
+    }
+    h1 {
+        font-size: 35px;
+        padding-left: 20px;
+    }
+    .left-part {
+        padding-bottom: 40px;
+    }
+    .link i {
+        font-size: 22px;
+    }
+}
